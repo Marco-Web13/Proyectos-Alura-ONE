@@ -9,7 +9,6 @@ function agregarAmigo(){
     listaDeAmigos.push(nombreDeAmigo);
     llenarLista();
 
-    //Intento de limpiar la barra input
     document.querySelector('#amigo').value = '';
 }
 
