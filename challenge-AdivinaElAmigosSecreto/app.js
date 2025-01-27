@@ -31,5 +31,11 @@ function cambiarTextos(elemento, texto) {
 function sortearAmigo() {
     let numeroRandom = parseInt(Math.random()*listaDeAmigos.length);
 
-    cambiarTextos('#resultado', ""+listaDeAmigos[numeroRandom])
+    if(listaDeAmigos.length>0){
+        cambiarTextos('#resultado', ""+listaDeAmigos[numeroRandom])
+    }
+    else{
+        alert("Lista de amigos vacia");
+    }
+    //cambiarTextos('#resultado', ""+listaDeAmigos[numeroRandom])
 }
