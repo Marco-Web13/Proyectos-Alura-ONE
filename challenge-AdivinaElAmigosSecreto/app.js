@@ -2,14 +2,20 @@
 let nombreDeAmigo;
 let listaDeAmigos = [];
 
+console.log(isNaN(nombreDeAmigo));//String
 
 function agregarAmigo(){
     nombreDeAmigo = document.getElementById('amigo').value
+    if(isNaN(nombreDeAmigo)){
+        listaDeAmigos.push(nombreDeAmigo);
+        llenarLista();
 
-    listaDeAmigos.push(nombreDeAmigo);
-    llenarLista();
-
-    document.querySelector('#amigo').value = '';
+        document.querySelector('#amigo').value = '';
+    }
+    else{
+        alert("Inserta un nombre valido");
+        document.querySelector('#amigo').value = '';
+    }
 }
 
 function llenarLista() {
@@ -23,7 +29,7 @@ function cambiarTextos(elemento, texto) {
 }
 
 function sortearAmigo() {
-    let numeroRandom = parseInt(Math.random()*numeroMaximo)+1;
+    let numeroRandom = parseInt(Math.random()*listaDeAmigos.length);
 
-    if(numeroRandom === listaDeAmigos){}
+    cambiarTextos('#resultado', ""+listaDeAmigos[numeroRandom])
 }
