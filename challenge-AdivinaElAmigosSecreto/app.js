@@ -42,3 +42,13 @@ function sortearAmigo() {
     }
     //cambiarTextos('#resultado', ""+listaDeAmigos[numeroRandom])
 }
+
+const Nodo = {
+    nodo: nodo,
+    izquierda: izquierda,
+    derecha: derecha
+}
+
+const Arbol = {
+    
+}
